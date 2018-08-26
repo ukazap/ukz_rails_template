@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+RAILS_REQUIREMENT = "~> 5.2.0"
+
 gem 'komponent'
 gem 'slim-rails'
 gem 'webpacker'
