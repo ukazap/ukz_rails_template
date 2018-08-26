@@ -11,3 +11,11 @@ gem_group :development do
   gem 'pry-byebug'
   gem 'rack-livereload'
 end
+
+after_bundle do
+  rails_command 'webpacker:install'
+  generate 'komponent:install'
+  git :init
+  git add: "."
+  git commit: %Q{ -m 'Ukaza was here.' }
+end
